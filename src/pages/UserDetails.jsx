@@ -61,15 +61,15 @@ function UserDetails() {
                                 <a href={html_url} target="_blank" rel="noreferrer" className="btn btn-outline w-1/4">Visit Github Profile</a>
                                 <div className="flex flex-row rounded-lg shadow-xl w-full justify-between">
                                     <div className="flex flex-col grow p-3 shadow-xl">
-                                        <div className="font-light text-slate-400">Location</div>
+                                        <div className="font-medium text-slate-400">Location</div>
                                         <div className="text-sm font-bold">{location}</div>
                                     </div>
                                     <div className="flex flex-col grow border-slate-700 border-x-2 p-3 shadow-xl">
-                                        <div className="font-light text-slate-400">Company</div>
+                                        <div className="font-medium text-slate-400">Company</div>
                                         <div className="text-sm font-bold">{company}</div>
                                     </div>
                                     <div className="flex flex-col grow p-3 shadow-xl">
-                                        <div className="font-light text-slate-400">Twitter</div>
+                                        <div className="font-medium text-slate-400">Twitter</div>
                                         <div className="text-sm font-bold">{twitter_username}</div>
                                     </div>
                                 </div>

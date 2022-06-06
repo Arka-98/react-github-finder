@@ -8,25 +8,21 @@ import Alert from "./components/layout/Alert";
 import { GithubContextProvider } from "./components/context/github/GithubContext";
 import { AlertContextProvider } from "./components/context/alert/AlertContext";
 import UserDetails from "./pages/UserDetails";
+import PageLayout from "./components/layout/PageLayout";
 
 function App() {
   return (
     <GithubContextProvider>
       <AlertContextProvider>
         <Router>
-          <div className="flex flex-col justify-between h-screen">
-            <Navbar className="sticky" />
-            <div className="container mx-auto py-10">
-              <Alert />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="*" element={<NotFound />} />
-                <Route path="/user/:login" element={<UserDetails />} />
-              </Routes>
-            </div>
-            <Footer />
-          </div>
+          <Routes>
+            <Route element={<PageLayout/>}>
+              <Route path="/" element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="*" element={<NotFound />} />
+              <Route path="/user/:login" element={<UserDetails />} />
+            </Route>
+          </Routes>
         </Router>
       </AlertContextProvider>
     </GithubContextProvider>
